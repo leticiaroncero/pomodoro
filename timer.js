@@ -35,6 +35,9 @@ var timerObj = {
     },
    
     count2: function() {
+        if(timerObj.minutes === 0) {
+            timerObj.minutes = 25
+        }
 
       timerObj.minutes--;
       var newConverted = timerObj.timeConverter(timerObj.seconds, timerObj.minutes)
